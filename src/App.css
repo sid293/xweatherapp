@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.weather-cards{
+  display:flex;
+  justify-content:space-around;
+  /* align-items: center; */
+  /* height:"4000px"; */
+
+}
+.weather-card{
+  margin-top:100px;
+  height:100px;
+  width:200px;
+}
