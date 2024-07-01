@@ -8,6 +8,7 @@ function App() {
   let [data, setData] = useState({});
 
   let handleSubmit = (e) => {
+    setLoading(true);
     let key = "4185ba94a3064d918ca165521221103";
     let baseurl  = "https://api.weatherapi.com/v1/current.json";
     e.preventDefault();
@@ -36,7 +37,7 @@ function App() {
         <button type="submit">Submit</button>
       </form>
       {loading && <p>Loading data...</p>}
-      {Object.keys(data).length > 0 &&
+      {Object.keys(data).length > 0 && !loading &&
         <div className="weather-cards">
           <div className='weather-card'>
             <h3>Weather</h3>
